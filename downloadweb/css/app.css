@@ -1,0 +1,98 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+
+.up-part{
+	background: url(../image/wbg1.jpg) no-repeat center center;
+	/*background-position: 40%;
+	background-size: 140% 100%;*/
+	height: 460px;
+	margin: 0;
+}
+
+.product{
+	height: 420px;
+	width: 700px;
+	margin: auto;
+	padding: 0;
+}
+
+.description{
+	float: left;
+	width: 232px;
+	height: 420px; 
+	background: url(../image/description.png) no-repeat;
+}
+
+.show{
+	float: right;
+	width: 278px;
+	height: 420px;
+	background: url(../image/shouji.png) no-repeat;
+	background-size: 100%, 120%;
+}
+
+.showbox{
+	margin-top: 85px;
+	margin-left: 32px;
+	width: 220px;
+	height: 332px;
+}
+
+.showpic{
+	width: 220px;
+	height: 332px;
+}
+
+img{
+	border: 0;
+}
+
+.link{
+	height: 200px;
+	width: 700px;
+	margin: auto;
+}
+
+.downlink{
+	float: left;
+	margin-top: 20px;
+	padding: 0;
+}
+
+.downlink a img{
+	height: 50px;
+	margin: 10px;
+}
+
+.code{
+	float: right;
+	margin-top: 20px;
+	width: 300px;
+}
+
+.codebox{
+	float: right;
+	width: 130px;
+	height: 150px;
+	margin-left: 18px;
+	text-align: center;
+}
+
+.codebox img{
+	width: 130px;
+	height: 130px;
+}
+
+span{
+	color: #585858;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.foot{
+	margin-bottom: 20px;
+	text-align: center;
+}

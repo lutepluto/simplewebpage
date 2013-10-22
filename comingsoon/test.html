@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>getJSON获取数据</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<style type="text/css">
+ #divframe{ border:1px solid #999; width:500px; margin:0 auto;}
+ .loadTitle{ background:#CCC; height:30px;}
+</style>
+</head>
+
+<body>
+<div id="divframe">
+  <div class="loadTitle">
+    <input type="button" value="获取数据" id="btn"/>
+  </div>
+  <div id="jsonTip">
+  </div>
+</div>
+<script type="text/javascript">
+	$("#btn").click(function(){
+	  alert(questions[0].quesion);
+	});
+</script>
+</body>
+</html>

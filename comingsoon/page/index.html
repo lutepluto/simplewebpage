@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:wb=“http://open.weibo.com/wb”>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节操</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sharelink">
+        <script type="text/javascript" charset="utf-8">
+
+                (function(){
+
+                var _w = 140 , _h = 70;
+
+                var param = {
+
+                url:location.href ,
+
+                type:'4',
+
+                count:'1', /**是否显示分享数，1显示(可选)*/
+
+                appkey: '3821244253', /**您申请的应用appkey,显示分享来源(可选)*/
+
+                title:'#测试你的节操值#本套操Q（节操值）测试题由艾尼玛德研究所历时七年研发设计，能够准确反应一个人的节操多少，共八道单选题，满分300分，有可能出现负分，测试开始后，请在四个选项中选出你认为最合适的一项。地址', /**分享的文字内容(可选，默认为所在页面的title)*/
+
+                pic:'http://www.lutepluto.com/jiecao/image/caoQtest.gif', /**分享图片的路径(可选)*/
+
+                ralateUid:'3422903910', /**关联用户的UID，分享微博会@该用户(可选)*/
+
+                language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+
+                rnd:new Date().valueOf()
+
+                }
+
+                var temp = [];
+
+                for( var p in param ){
+
+                temp.push(p + '=' + encodeURIComponent(param[p] || '' ) )
+
+                }
+
+                document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'"height="'+_h+'"></iframe>');
+                })()
+
+        </script>
+      </div>
+      <div class="start">
+      	
+      </div>
+      <div class="question-box">
+      	<div class="opt-bar">
+      	  <button type="button" class="backbtn"><img src="../image/back.png"></button>
+      	  <button type="button" class="closebtn"><img src="../image/choose.png"></button>
+        </div>
+
+        <!--questions show-->
+        <div class="questions-show">
+          <div class="question">
+            <div class="question-title"></div>
+            <div class="question-image disappear">
+            </div>
+            <div class="question-content">
+              
+            </div>
+          </div>
+        	<div class="choice">
+        	  <div class="ans">A.</div>
+        	  <div class="ans">B.</div>
+        	  <div class="ans">C.</div>
+        	  <div class="ans">D.</div>
+        	 </div>
+         </div>
+
+         <!--reuslt show-->
+         <div class="result-show">
+           <div class="result-image">
+             <img src="">
+           </div>
+           <div class="result-content">
+             <span class="result-content-before">你的操Q：</span>
+             <span class="result-content-score"></span>
+             <div class="result-content-words">
+             </div>
+           </div>
+           <div class="share-redo-button">
+             <button type="button" class="share-button" style="margin-top: 5px;">
+               <!--<img class="share-img" src="../image/sharebtn.png">
+               <wb:share-button class="sina-share" pic="" title="" count="n" type="button" size="big" ></wb:share-button>-->
+               <!--
+               <wb:share-button class="sina-share" pic="" title="" appkey="6a5dGB" addition="simple" type="button" ralateUid="3422903910" language="zh_cn"></wb:share-button>
+               -->
+               <script type="text/javascript" charset="utf-8">
+                
+                
+
+                document.write('<iframe class="shareUrl" allowTransparency="true" frameborder="0" scrolling="no" src=""></iframe>');
+                
+
+                </script>
+             </button>
+           </div>
+         </div>
+      </div>	
+    </div>
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bpopup.min.js"></script>
+    
+    <script type="text/javascript">
+
+      $(".ans:odd").css("float", "right");
+      $(".ans:even").css("float", "left");
+
+
+      $("#startimg").hover(
+        function(){
+          $(this).attr("src", "../image/toweiboon.png")
+        },
+        function(){
+          $(this).attr("src", "../image/toweibo.png");
+        }
+      );
+
+      $(".start").hover(
+      	function(){
+      	  $(this).css("background-image", "url(../image/starton.png)")
+      	 },
+      	 function(){
+           $(this).css("background-image", "url(../image/start.png)")
+      	 }
+      );
+
+      $(".ans").hover(
+        function(){
+          $(this).css("background-image", "url(../image/wention.png)");
+        },
+        function(){
+          $(this).css("background-image", "url(../image/chooseon.png)");
+        }
+      );
+
+
+      var temp = [];
+      var _w = 86 , _h = 50;
+      function createParameters(){
+
+        var relativeUrl = $(".result-image img").attr("src").substring(2);
+        alert(relativeUrl);
+        var shareImageUrl = "http://www.lutepluto.com/jiecao" + relativeUrl;
+        console.log("now the url is " + shareImageUrl);
+        var shareContent = $(".result-content-before").text() + $(".result-content-score").text() + $(".result-content-words").text();
+        
+        var param = {
+          url:location.href,
+          type:'2',
+          count:'1', /**是否显示分享数，1显示(可选)*/
+          appkey: '3821244253', /**您申请的应用appkey,显示分享来源(可选)*/
+          title: shareContent, /**分享的文字内容(可选，默认为所在页面的title)*/
+          pic: shareImageUrl, /**分享图片的路径(可选)*/
+          alateUid:'3422903910', /**关联用户的UID，分享微博会@该用户(可选)*/
+          language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+          rnd:new Date().valueOf()
+        }
+
+        
+        for( var p in param ){
+          temp.push(p + '=' + encodeURIComponent(param[p] || '' ) );
+        }
+      }
+
+      var num = 0;
+
+      $(document).ready(function(){
+
+        var scores = new Array();
+
+        //show the popup layer.
+        $(".start").click(function(){
+          $(".question-box").bPopup({
+            opacity: 0.5,
+            speed: 450,
+            transition: 'slideDown'
+          });
+          $(".result-show").addClass("disappear");
+          $(".questions-show").removeClass("disappear");
+          alert("the url is " + $(".result-image img").attr("src"));
+          num = 0;
+          //console.log("num is " + window.num);
+          showQuestions(num);
+        });
+
+        //close the popup window
+        $(".closebtn").click(function(){
+          $(".question-box").bPopup().close();
+          num = 0;
+          //console.log("num is " + window.num);
+        });
+
+        //show back questions
+        $(".backbtn").bind("click", function() {
+          num = num - 1;
+          //console.log("num is " + window.num);
+          showQuestions(num);
+        });
+
+        //showQuestions(num);
+
+        //when user click one of the choices
+        $(".choice > .ans").each(function(index){
+          $(this).click(function(){
+
+            console.log("index is " + index);
+            scores[num] = questions[num].options[index].score;
+            num = num + 1;
+            //console.log("num is " + window.num);
+
+            if(num > 7){
+              var total = 0;
+              for(var val in scores){
+                //console.log("the val is " + scores[val]);
+                total = total + scores[val];
+              }
+              //console.log("the result is " + total);
+              showScores(total);
+              num = 0;
+              createParameters();
+              $(".shareUrl").attr("src", "");
+              $(".shareUrl").attr("src", "http://hits.sinajs.cn/A1/weiboshare.html?" + temp.join('&') + '" width="'+ _w+'"height="'+_h);
+              return;
+            }
+
+            showQuestions(num);
+
+          });          
+        });
+      });
+    </script>
+  </body>
+</html>

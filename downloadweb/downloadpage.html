@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节操新闻</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+  </head>
+  <body>
+    <div class="up-part">
+      <div style="height: 40px"></div>
+      <div class="product">
+        <div class="description"></div>
+        <div class="show">
+          <div class="showbox">
+            <!--<img class="showpic" src="image/show1.jpg">-->
+            <div id="myCarousel" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="active item"><img class="showpic" src="image/show1.jpg"></div>
+                <div class="item"><img class="showpic" src="image/show2.jpg"></div>
+                <div class="item"><img class="showpic" src="image/show3.jpg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="down-part">
+      <div class="link">
+        <div class="downlink">
+          <a href=" https://itunes.apple.com/us/app/jie-cao-xin-wen-qi-pa-nei/id688114447?ls=1&mt=8">
+            <img src="image/webios.png">
+          </a>
+          <a href="http://news.jiecao.fm/download/jiecaonews.apk">
+            <img src="image/webandroid.png">
+          </a>
+        </div>
+        <div class="code">
+          <div class="codebox">
+            <img src="image/ioscode5.png">
+            <span>ios版二维码下载</span>
+          </div>
+          <div class="codebox">
+            <img src="image/androidcode5.png">
+            <span>安卓版二维码下载</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span style="font-family:arial;">&copy;2013 www.jiecao.fm All rights reserved.</span>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+      $('#myCarousel').carousel({
+        interval: 6000
+      });
+    </script>
+  </body>
+</html>
